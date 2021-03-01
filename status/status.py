@@ -8,12 +8,12 @@ class StatusPlugin(commands.Cog):
     self.bot = bot
     
   @commands.command(name = "statusloop")
-  async def status_task(self, ctx, *, activity1, activity2, seconds1=15, seconds2=15):
+  async def status_task(self, ctx, *, activity1, activity2, seconds1=15:
     while True:
         await bot.change_presence(activity=discord.Game(name=activity1))
         await asyncio.sleep(seconds1)
         await bot.change_presence(activity=discord.Game(name=activity2))
-        await asyncio.sleep(seconds2)
+        await asyncio.sleep(seconds1)
         
   @commands.Cog.listener()
   async def on_ready():
